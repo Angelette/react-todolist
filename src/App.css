@@ -1,0 +1,108 @@
+* {
+    font-family: monospace;
+}
+
+/* All buttons */
+button {
+    border: none;
+}
+
+#header {
+    background-color: salmon;
+    padding: 5%;
+    text-align: center;
+}
+
+/* Title */
+#header h1 {
+    color: white;
+    letter-spacing: 3px;
+}
+
+/* Input text field - new item */
+#newInput {
+    width: 80%;
+    height: 20px;
+    border: none;
+    float: left;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 2%;
+}
+
+/* Add Button - add new list item */
+#addBtn {
+    height: 22px;
+    background-color: lightgray;
+    float: left;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#addBtn:hover {
+    background-color: gray;
+}
+
+
+ul {
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+li {
+    padding: 1%;
+    list-style-type: none; /* remove bullet points*/
+}
+
+li:hover {
+    background-color: lightgray;
+}
+
+/* Alternate rows of list items */
+li:nth-child(even) {
+    background-color: snow;
+}
+
+li:nth-child(even):hover {
+    background-color: lightgray;
+}
+
+/* Remove list item buttons */
+li button {
+    float: right;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 0.5%;
+}
+
+li button:hover {
+    background-color: maroon;
+    color: white;
+}
+
+/* Clear All button */
+#clearBtn {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    /* float: right; */
+}
+
+#clearBtn:hover {
+    background-color: maroon;
+    color: white;
+}
+
+#clearBtnContainer {
+    text-align: center;
+}
+
+/* Checkbox */
+/* input[type=checkbox] {
+    visibility: hidden;
+} */

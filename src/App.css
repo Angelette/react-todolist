@@ -20,7 +20,7 @@ button {
 }
 
 /* Input text field - new item */
-#newInput {
+#itemInput {
     width: 80%;
     height: 20px;
     border: none;

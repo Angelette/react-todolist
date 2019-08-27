@@ -6,70 +6,56 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      userInput: "",
-      toDoList: []
+      newItem: "",
+      items: []
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // handleChange = (onChangeEvent) => {
-  //   this.setState({
-  //     userInput: onChangeEvent.target.value
-  //   })
-  // }
-
-  handleChange(onChangeEvent) {
+  itemInputChanged(event) {
     this.setState({
-      userInput: onChangeEvent.target.value
+      newItem: event.target.value
     });
   }
 
-  // handleSubmit() {
-  //   //const itemsArr = this.state.userInput.split(',');
-  //   this.setState({
-  //     toDoList: this.state.userInput.toString()
-  //   });
-  //   // // Clear input
-  //   // itemsArr = "";
-  // }
-
-  // handleSubmit = (onSubmitEvent) => {
-  //   this.setState({
-  //     toDoList: this.state.userInput.toString()
-  //   });
-  // }
-
-  handleSubmit() {
-    this.state.toDoList.push(this.state.userInput.toString());
-    // this.setState({
-    //   toDoList: this.state
-    // })
+  submitForm(event) {
+    event.preventDefault();
+    this.setState({
+      items: [
+        ...this.state.items,
+        {
+          itemName: this.state.newItem,
+          done: false
+        }
+      ]
+    });
+    this.setState({
+      newItem: ""
+    });
   }
 
   render() {
-    const items = this.state.toDoList.map((item, i) => (
-      <li key={item + i}>{item}</li>
-    ));
     return (
       <div id="App">
         <div id="header">
           <title>To Do List</title>
           <h1>Things To Do</h1>
-          <input
-            id="newInput"
-            onChange={this.handleChange}
-            value={this.state.userInput}
-            placeholder="Enter your item here . . ."
-          />
-          <span id="addBtn" onClick={this.handleSubmit}>
-            Add
-          </span>
+          <form onSubmit={event => this.submitForm(event)}>
+            <input
+              id="itemInput"
+              onChange={event => this.itemInputChanged(event)}
+              value={this.state.newItem}
+              placeholder="I am going to ..."
+            />
+            <button id="addBtn" type="submit">
+              Add
+            </button>
+          </form>
         </div>
-        <div>
-          <ul>{items}</ul>
-        </div>
+        <ul>
+          {this.state.items.map(item => {
+            return <li key={item.itemName}>{item.itemName}</li>;
+          })}
+        </ul>
       </div>
     );
   }

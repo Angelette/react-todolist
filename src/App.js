@@ -14,17 +14,17 @@ class App extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (onChangeEvent) => {
-    this.setState({
-      userInput: onChangeEvent.target.value
-    })
-  }
-
-  // handleChange(onChangeEvent) {
+  // handleChange = (onChangeEvent) => {
   //   this.setState({
   //     userInput: onChangeEvent.target.value
-  //   });
+  //   })
   // }
+
+  handleChange(onChangeEvent) {
+    this.setState({
+      userInput: onChangeEvent.target.value
+    });
+  }
 
   // handleSubmit() {
   //   //const itemsArr = this.state.userInput.split(',');
@@ -35,18 +35,18 @@ class App extends React.Component {
   //   // itemsArr = "";
   // }
 
-  handleSubmit = (onSubmitEvent) => {
-    this.setState({
-      toDoList: this.state.userInput.toString()
-    });
-  }
-
-  // handleSubmit() {
-  //   this.state.toDoList.push(this.state.userInput.toString());
+  // handleSubmit = (onSubmitEvent) => {
   //   this.setState({
-  //     toDoList: this.state
-  //   })
+  //     toDoList: this.state.userInput.toString()
+  //   });
   // }
+
+  handleSubmit() {
+    this.state.toDoList.push(this.state.userInput.toString());
+    // this.setState({
+    //   toDoList: this.state
+    // })
+  }
 
   render() {
     const items = this.state.toDoList.map((item, i) => (

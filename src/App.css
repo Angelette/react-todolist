@@ -10,7 +10,7 @@ button {
 
 #header {
     background-color: salmon;
-    padding: 5%;
+    padding: 10%;
     text-align: center;
 }
 
@@ -47,28 +47,35 @@ button {
 }
 
 
+
+
 ul {
-    padding: 0;
-    background-color: whitesmoke;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 15%;
+    /* background-color: whitesmoke; */
 }
 
 li {
+    margin: 1%;
     padding: 1%;
     padding-left: 5%;
     list-style-type: none; /* remove bullet points*/
+    background-color: salmon;
+    border-radius: 10px;
 }
 
 li:hover {
-    background-color: lightgray;
+    background-color: dimgray;
 }
 
 /* Alternate rows of list items */
 li:nth-child(even) {
-    background-color: snow;
+    background-color: lightgray;
 }
 
 li:nth-child(even):hover {
-    background-color: lightgray;
+    background-color: dimgray;
 }
 
 
@@ -76,12 +83,12 @@ li:nth-child(even):hover {
 
 .done {
     text-decoration: line-through;
-    background-color: silver;
+    background-color: dimgray;
 }
 
 .done:nth-child(even) {
     text-decoration: line-through;
-    background-color: silver;
+    background-color: dimgray;
 }
 
 
@@ -91,14 +98,15 @@ li:nth-child(even):hover {
 /* Remove list item buttons */
 #removeBtn {
     float: right;
+    margin-right: 5%;
     background-color: transparent;
     border-radius: 15px;
-    color: salmon
+    color: white;
 }
 
 #removeBtn:hover {
-    background-color: salmon;
-    color: white;
+    background-color: white;
+    color: salmon;
 }
 
 /* Clear All button */

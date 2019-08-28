@@ -99,7 +99,7 @@ class App extends React.Component {
                     id="removeBtn"
                     onClick={() => this.removeItem(index)}
                   >
-                    <span className="glyphicon glyphicon-remove"></span>
+                    <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
                   </button>
                 </div>
               </li>

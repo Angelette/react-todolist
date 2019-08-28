@@ -54,6 +54,7 @@ ul {
 
 li {
     padding: 1%;
+    padding-left: 5%;
     list-style-type: none; /* remove bullet points*/
 }
 
@@ -75,7 +76,12 @@ li:nth-child(even):hover {
 
 .done {
     text-decoration: line-through;
-    background-color: dimgray;
+    background-color: silver;
+}
+
+.done:nth-child(even) {
+    text-decoration: line-through;
+    background-color: silver;
 }
 
 
@@ -86,7 +92,7 @@ li:nth-child(even):hover {
 #removeBtn {
     float: right;
     background-color: transparent;
-    /* border-radius: 15px; */
+    border-radius: 15px;
     color: salmon
 }
 

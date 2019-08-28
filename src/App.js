@@ -85,8 +85,8 @@ class App extends React.Component {
           {/* Each object returns list item */}
           {this.state.items.map((item, index) => {
             return (
-              <li key={item.itemName + index}>
-                <div className={item.done ? "done" : ""}>
+              <li key={item.itemName + index} className={item.done ? "done" : ""}>
+                <div>
                   <input
                     type="checkbox"
                     // Takes in event, calls method toggleCheckbox with params event and index

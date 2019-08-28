@@ -1,5 +1,6 @@
 * {
     font-family: monospace;
+    font-size: 11pt;
 }
 
 /* All buttons */
@@ -32,7 +33,7 @@ button {
 
 /* Add Button - add new list item */
 #addBtn {
-    height: 22px;
+    height: 20px;
     background-color: lightgray;
     float: left;
     border-top-right-radius: 15px;
@@ -69,16 +70,28 @@ li:nth-child(even):hover {
     background-color: lightgray;
 }
 
-/* Remove list item buttons */
-li button {
-    float: right;
-    background-color: transparent;
-    border-radius: 15px;
-    padding: 0.5%;
+
+
+
+.done {
+    text-decoration: line-through;
+    background-color: dimgray;
 }
 
-li button:hover {
-    background-color: maroon;
+
+
+
+
+/* Remove list item buttons */
+#removeBtn {
+    float: right;
+    background-color: transparent;
+    /* border-radius: 15px; */
+    color: salmon
+}
+
+#removeBtn:hover {
+    background-color: salmon;
     color: white;
 }
 

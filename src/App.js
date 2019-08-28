@@ -18,18 +18,47 @@ class App extends React.Component {
   }
 
   submitForm(event) {
-    event.preventDefault();
-    this.setState({
-      items: [
-        ...this.state.items,
-        {
-          itemName: this.state.newItem,
-          done: false
-        }
-      ]
-    });
+    // Check empty input
+    if (this.state.newItem.trim().length !== 0) {
+      event.preventDefault(); // Prevent reload
+      // ... Find and update/replace only those with changes
+      // Take everything currently in the array,
+      // put in new array defined here,
+      // put new object itemName and done at end of array
+      this.setState({
+        items: [
+          ...this.state.items,
+          {
+            itemName: this.state.newItem,
+            done: false
+          }
+        ]
+      });
+    } else {
+      alert("Sorry! Could not add empty item. Please type something!");
+      event.preventDefault(); // Prevent reload
+    }
+    // Clear input
     this.setState({
       newItem: ""
+    });
+  }
+
+  toggleCheckbox(event, index) {
+    const items = [...this.state.items]; // copies array (can't directly)
+    items[index] = { ...items[index] }; // copies the list
+    items[index].done = event.target.checked; // updates "done" property on copied list
+    this.setState({
+      items
+    });
+  }
+
+  removeItem(index) {
+    const items = [...this.state.items]; // copies array
+    items.splice(index, 1);
+
+    this.setState({
+      items
     });
   }
 
@@ -52,8 +81,29 @@ class App extends React.Component {
           </form>
         </div>
         <ul>
-          {this.state.items.map(item => {
-            return <li key={item.itemName}>{item.itemName}</li>;
+          {/* Maps array of objects into JSX */}
+          {/* Each object returns list item */}
+          {this.state.items.map((item, index) => {
+            return (
+              <li key={item.itemName + index}>
+                <div className={item.done ? "done" : ""}>
+                  <input
+                    type="checkbox"
+                    // Takes in event, calls method toggleCheckbox with params event and index
+                    onChange={event => this.toggleCheckbox(event, index)}
+                  />
+                  {item.itemName}
+                  <button
+                    type="button"
+                    className="btn btn-default"
+                    id="removeBtn"
+                    onClick={() => this.removeItem(index)}
+                  >
+                    <span className="glyphicon glyphicon-remove"></span>
+                  </button>
+                </div>
+              </li>
+            );
           })}
         </ul>
       </div>

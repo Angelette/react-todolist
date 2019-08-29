@@ -130,7 +130,7 @@ class App extends React.Component {
                     // Takes in event, calls method toggleCheckbox with params event and index
                     onChange={event => this.toggleCheckbox(event, index)}
                   />
-                  {item.itemName}
+                  <span id="itemName">{item.itemName}</span>
                   <button
                     type="button"
                     className="btn btn-default"

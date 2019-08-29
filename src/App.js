@@ -54,8 +54,6 @@ class App extends React.Component {
     this.setState({
       items
     });
-    // Autofocus itemInput
-    this.autoFocusInput();
   }
 
   removeItem(index) {
@@ -164,7 +162,7 @@ class App extends React.Component {
           type="button"
           id="scrollTopBtn"
           className={
-            this.state.items && this.state.items.length > 4 ? "" : "hide"
+            this.state.items && this.state.items.length > 3 ? "" : "hide"
           }
           onClick={() => this.scrollToTop()}
         >

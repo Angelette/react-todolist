@@ -23,7 +23,7 @@ button {
 
 /* Input text field - new item */
 #itemInput {
-    width: 80%;
+    width: 85%;
     height: 20px;
     border: none;
     float: left;
@@ -34,6 +34,7 @@ button {
 
 /* Add Button - add new list item */
 #addBtn {
+    width: 15%;
     height: 20px;
     background-color: lightgray;
     float: left;
@@ -45,6 +46,7 @@ button {
 
 #addBtn:hover {
     background-color: gray;
+    transition: 0.5s;
 }
 
 
@@ -53,22 +55,24 @@ button {
 ul {
     padding: 3%;
     padding-left: 10%;
-    padding-right: 15%;
+    padding-right: 10%;
     /* background-color: whitesmoke; */
 }
 
 li {
-    margin: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding: 2%;
     padding-left: 5%;
     list-style-type: none; /* remove bullet points*/
     background-color: salmon;
     border-radius: 10px;
-    box-shadow: 3px 5px gray;
+    box-shadow: 3px 5px 5px gray;
 }
 
 li:hover {
-    background-color: dimgray;
+    background-color: indianred;
+    transition: 0.5s;
 }
 
 /* Alternate rows of list items */
@@ -77,10 +81,11 @@ li:nth-child(even) {
 }
 
 li:nth-child(even):hover {
-    background-color: dimgray;
+    background-color: darkgray;
 }
 
 #itemName {
+    color: black;
     padding-left: 5%;
     padding-right: 5%;
     /* overflow: scroll; */
@@ -126,12 +131,13 @@ li:nth-child(even):hover {
     padding-left: 1.5%;
     padding-right: 1.5%;
     float: right;
-    margin-right: 16%;
+    margin-right: 10%;
 }
 
 #clearBtn:hover {
     background-color: maroon;
     color: white;
+    transition: 0.5s;
 }
 
 #allBtnContainer {
@@ -148,15 +154,18 @@ li:nth-child(even):hover {
     background-color: salmon;
     color: white;
     border-radius: 15px;
-    padding: 0.5%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    padding: 1.5%;
     float: right;
-    margin-right: 16%;
+    margin-right: 0%;
     margin-bottom: 5%;
 }
 
+#scrollTopBtn:hover {
+    background-color: indianred;
+}
+
 /* Checkbox */
-/* input[type=checkbox] {
-    visibility: hidden;
-} */
+input[type=checkbox] {
+    /* visibility: hidden; */
+    font-size: 20px;
+}

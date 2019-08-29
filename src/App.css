@@ -18,6 +18,7 @@ button {
 #header h1 {
     color: white;
     letter-spacing: 3px;
+    padding-bottom: 2%;
 }
 
 /* Input text field - new item */
@@ -50,7 +51,7 @@ button {
 
 
 ul {
-    padding: 5%;
+    padding: 3%;
     padding-left: 10%;
     padding-right: 15%;
     /* background-color: whitesmoke; */
@@ -98,7 +99,7 @@ li:nth-child(even):hover {
 /* Remove list item buttons */
 #removeBtn {
     float: right;
-    margin-right: 5%;
+    margin-right: 3%;
     background-color: transparent;
     border-radius: 15px;
     color: white;
@@ -113,11 +114,12 @@ li:nth-child(even):hover {
 #clearBtn {
     background-color: gray;
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 0.5%;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    /* float: right; */
+    float: right;
+    margin-right: 16%;
 }
 
 #clearBtn:hover {
@@ -125,8 +127,26 @@ li:nth-child(even):hover {
     color: white;
 }
 
-#clearBtnContainer {
+#allBtnContainer {
     text-align: center;
+    /* margin-top: 2%; */
+    margin-bottom: 8%;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#scrollTopBtn {
+    background-color: salmon;
+    color: white;
+    border-radius: 15px;
+    padding: 0.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    float: right;
+    margin-right: 16%;
+    margin-bottom: 5%;
 }
 
 /* Checkbox */

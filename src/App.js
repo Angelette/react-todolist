@@ -63,8 +63,6 @@ class App extends React.Component {
     this.setState({
       items
     });
-    // Autofocus itemInput
-    this.autoFocusInput();
   }
 
   // Autofocus itemInput on render

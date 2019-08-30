@@ -6,12 +6,14 @@
 /* All buttons */
 button {
     border: none;
+    transition: 0.5s;
 }
 
 #header {
     background-color: salmon;
     padding: 10%;
     text-align: center;
+    box-shadow: 5px 5px 10px gray;
 }
 
 /* Title */
@@ -67,12 +69,18 @@ li {
     list-style-type: none; /* remove bullet points*/
     background-color: salmon;
     border-radius: 10px;
-    box-shadow: 3px 5px 5px gray;
+    box-shadow: 3px 3px 10px gray;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 li:hover {
     background-color: indianred;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 /* Alternate rows of list items */
@@ -82,6 +90,7 @@ li:nth-child(even) {
 
 li:nth-child(even):hover {
     background-color: darkgray;
+    transition: 1s;
 }
 
 #itemName {
@@ -94,14 +103,11 @@ li:nth-child(even):hover {
 
 
 
-.done {
+.done, .done:nth-child(even) {
+    color: white;
     text-decoration: line-through;
-    background-color: dimgray;
-}
-
-.done:nth-child(even) {
-    text-decoration: line-through;
-    background-color: dimgray;
+    /* background-color: dimgray; */
+    opacity: 0.3;
 }
 
 
@@ -119,7 +125,7 @@ li:nth-child(even):hover {
 
 #removeBtn:hover {
     background-color: white;
-    color: salmon;
+    color: indianred;
 }
 
 /* Clear All button */
